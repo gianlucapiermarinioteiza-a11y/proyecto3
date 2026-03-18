@@ -73,14 +73,37 @@ h1 {
         font-size: 3rem;
     }
 }
+/* Esto le quita los puntos a CUALQUIER lista que tenga esta clase, 
+   ya sea en la fecha 1, la fecha 2 o la fecha 100 */
 .lista-fecha1 {
-    list-style: none; 
     padding: 0;
     margin: 20px auto;
     text-align: center;
     
     li {
+        list-style: none;
+        list-style-type: none;
         margin-bottom: 10px;
         font-weight: bold;
+    }
+}
+
+/* Y esto le da forma al botón de volver en todas las páginas */
+.btn-volver {
+    display: inline-block;   
+    margin: 30px auto;       
+    padding: 12px 30px;      
+    background-color: $accent-color; 
+    color: #1a1a1a;          
+    text-decoration: none;   
+    border-radius: 50px;     
+    font-weight: bold;     
+    font-style: normal;      
+    transition: all 0.3s ease; 
+    
+    &:hover {
+        transform: scale(1.05);  
+        background-color: $text-color; 
+        color: $bg-color;  
     }
 }
