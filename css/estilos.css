@@ -146,4 +146,15 @@ body {
   }
 }
 
+.lista-fecha1 {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  text-align: center;
+}
+.lista-fecha1 li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=estilos.css.map */

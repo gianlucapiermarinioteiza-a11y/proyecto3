@@ -1,5 +1,5 @@
 .navbar {
-    @include flex-center(column); // Usamos el mixin
+    @include flex-center(column); 
     gap: 15px;
     max-width: 100%;
 
@@ -14,20 +14,20 @@
     font-weight: bold;
 }
 
-// Agrupamos usando herencia y mixins
+
 .nav-links, .botones-sociales {
-    @extend %reset-lista; // Usamos el @extend
+    @extend %reset-lista; 
     @include flex-center(row);
     gap: 20px;
 
-    // Nesting y uso del selector padre &
+   
     a {
         color: $text-color;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
 
-        &:hover { // Equivale a .nav-links a:hover
+        &:hover { 
             color: $accent-color;
         }
     }
@@ -41,10 +41,10 @@
     height: auto;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    transition: transform 0.4s ease; // Transición
+    transition: transform 0.4s ease; 
 
     &:hover {
-        transform: scale(1.02) rotate(1deg); // Transformación avanzada
+        transform: scale(1.02) rotate(1deg); 
     }
 }
 
@@ -59,7 +59,7 @@
     font-weight: bold;     
     font-style: normal;      
     transition: all 0.3s ease; 
-    box-shadow: 0 4px 15px rgba($accent-color, 0.3); // Uso de variable en rgba
+    box-shadow: 0 4px 15px rgba($accent-color, 0.3); 
 
     &:hover {
         transform: scale(1.05);  
@@ -71,5 +71,16 @@
 h1 {
     @include responsive($bp-desktop) {
         font-size: 3rem;
+    }
+}
+.lista-fecha1 {
+    list-style: none; 
+    padding: 0;
+    margin: 20px auto;
+    text-align: center;
+    
+    li {
+        margin-bottom: 10px;
+        font-weight: bold;
     }
 }

@@ -12,7 +12,7 @@
 .header-principal {
     grid-area: header;
     background-color: rgba(0, 0, 0, 0.2);
-    padding: $base-padding * 1.5; // Operador matemático SASS (*)
+    padding: $base-padding * 1.5; 
 }
 
 .contenido-main {
@@ -24,7 +24,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    animation: aparecer 0.8s ease-out; // Aplicamos la animación
+    animation: aparecer 0.8s ease-out; 
     
     // Nesting con Media Queries
     @include responsive($bp-tablet) {

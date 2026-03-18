@@ -9,10 +9,10 @@ body {
     color: $text-color;
     background-color: $bg-color;
     line-height: 1.6;
-    text-align: center; // Lo aplicamos al body y se hereda limpio
+    text-align: center; 
 }
 
-// Animación requerida por la rúbrica
+
 @keyframes aparecer {
     from {
         opacity: 0;
