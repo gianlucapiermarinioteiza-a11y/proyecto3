@@ -1,0 +1,12 @@
+// 1. Abstracts (Variables y herramientas primero)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Base (Reseteos y body)
+@import 'base/base';
+
+// 3. Layout (Estructura grid)
+@import 'layout/grid';
+
+// 4. Components (Elementos individuales)
+@import 'components/components';

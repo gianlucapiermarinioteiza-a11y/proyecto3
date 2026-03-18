@@ -1,0 +1,75 @@
+.navbar {
+    @include flex-center(column); // Usamos el mixin
+    gap: 15px;
+    max-width: 100%;
+
+    @include responsive($bp-tablet) {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+// Agrupamos usando herencia y mixins
+.nav-links, .botones-sociales {
+    @extend %reset-lista; // Usamos el @extend
+    @include flex-center(row);
+    gap: 20px;
+
+    // Nesting y uso del selector padre &
+    a {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover { // Equivale a .nav-links a:hover
+            color: $accent-color;
+        }
+    }
+}
+
+.img-hero {
+    display: block;
+    margin: 20px auto;
+    width: 100%; 
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease; // Transición
+
+    &:hover {
+        transform: scale(1.02) rotate(1deg); // Transformación avanzada
+    }
+}
+
+.btn-volver {
+    display: inline-block;   
+    margin: 30px auto;       
+    padding: 12px 30px;      
+    background-color: $accent-color; 
+    color: #1a1a1a;          
+    text-decoration: none;   
+    border-radius: 50px;     
+    font-weight: bold;     
+    font-style: normal;      
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 15px rgba($accent-color, 0.3); // Uso de variable en rgba
+
+    &:hover {
+        transform: scale(1.05);  
+        background-color: $text-color; 
+        color: $bg-color;  
+    }
+}
+
+h1 {
+    @include responsive($bp-desktop) {
+        font-size: 3rem;
+    }
+}

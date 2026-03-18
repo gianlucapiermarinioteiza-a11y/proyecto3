@@ -1,0 +1,149 @@
+.nav-links, .botones-sociales {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #ffffff;
+  background-color: #6e52ec;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.grid-layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  font-style: italic;
+}
+
+.header-principal {
+  grid-area: header;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+.contenido-main {
+  grid-area: main;
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: aparecer 0.8s ease-out;
+}
+@media (min-width: 768px) {
+  .contenido-main {
+    padding: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .contenido-main {
+    margin: 40px auto;
+  }
+}
+
+.footer-sitio {
+  grid-area: footer;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links, .botones-sociales {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.nav-links a, .botones-sociales a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover, .botones-sociales a:hover {
+  color: #00ffc3;
+}
+
+.img-hero {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+.img-hero:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+.btn-volver {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  background-color: #00ffc3;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-style: normal;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 195, 0.3);
+}
+.btn-volver:hover {
+  transform: scale(1.05);
+  background-color: #ffffff;
+  color: #6e52ec;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

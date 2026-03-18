@@ -1,0 +1,21 @@
+// Mixin para Flexbox (evita repetir código)
+@mixin flex-center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin para Media Queries (Responsive)
+@mixin responsive($breakpoint) {
+    @media (min-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+// Placeholder (Plantilla) para usar con @extend
+%reset-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

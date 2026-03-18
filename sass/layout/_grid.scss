@@ -1,0 +1,43 @@
+.grid-layout {
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    font-style: italic;
+}
+
+.header-principal {
+    grid-area: header;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: $base-padding * 1.5; // Operador matemático SASS (*)
+}
+
+.contenido-main {
+    grid-area: main;
+    width: 90%; 
+    max-width: 100%;
+    margin: 0 auto;
+    padding: $base-padding * 2;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: aparecer 0.8s ease-out; // Aplicamos la animación
+    
+    // Nesting con Media Queries
+    @include responsive($bp-tablet) {
+        padding: $base-padding * 4;
+    }
+
+    @include responsive($bp-desktop) {
+        margin: 40px auto;
+    }
+}
+
+.footer-sitio {
+    grid-area: footer;
+    padding: $base-padding * 2;
+    background-color: rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main;
+    color: $text-color;
+    background-color: $bg-color;
+    line-height: 1.6;
+    text-align: center; // Lo aplicamos al body y se hereda limpio
+}
+
+// Animación requerida por la rúbrica
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
